@@ -1838,6 +1838,7 @@ button a {
   .models h2 {
     font-size: calc(20 / var(--screensize) * 100vw);
     margin-bottom: calc(6 / var(--screensize) * 100vw);
+    padding: 0 calc(10 / var(--screensize) * 100vw);
   }
 
   .models p {
