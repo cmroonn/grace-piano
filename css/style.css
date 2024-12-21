@@ -1107,10 +1107,22 @@ button a {
   font-size: calc(64 / var(--screensize) * 100vw);
   text-align: center;
   font-weight: 700;
-  margin-bottom: calc(35 / var(--screensize) * 100vw);
+  margin-bottom: calc(10 / var(--screensize) * 100vw);
   max-width: calc(1006 / var(--screensize) * 100vw);
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero p {
+  font-size: calc(32 / var(--screensize) * 100vw);
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: calc(35 / var(--screensize) * 100vw);
+}
+
+.hero .basic-btn {
+  font-size: calc(20 / var(--screensize) * 100vw);
+  margin-bottom: calc(16 / var(--screensize) * 100vw);
 }
 
 .who {
@@ -1350,12 +1362,18 @@ button a {
   max-width: calc(300 / var(--screensize) * 100vw);
 }
 
+.models__item span {
+  font-weight: 600;
+  font-size: calc(30 / var(--screensize) * 100vw);
+  display: block;
+  margin: calc(20 / var(--screensize) * 100vw) 0;
+}
+
 .contacts {
   background: #000;
   height: calc(897 / var(--screensize) * 100vw);
   padding: calc(143 / var(--screensize) * 100vw) calc(218 / var(--screensize) * 100vw);
   position: relative;
-  margin-top: calc(90 / var(--screensize) * 100vw);
 }
 
 .contacts__inner {
@@ -1637,6 +1655,100 @@ button a {
   text-align: center;
 }
 
+.about {
+  padding: calc(100 / var(--screensize) * 100vw) calc(159 / var(--screensize) * 100vw) calc(192 / var(--screensize) * 100vw);
+  background: #151515;
+  margin-top: calc(90 / var(--screensize) * 100vw);
+}
+
+.about h2 {
+  color: #fff;
+  font-size: calc(48 / var(--screensize) * 100vw);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: calc(153 / var(--screensize) * 100vw);
+}
+
+.about__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: calc(25 / var(--screensize) * 100vw);
+}
+
+.about__item {
+  padding-right: calc(50 / var(--screensize) * 100vw);
+  padding-left: calc(25 / var(--screensize) * 100vw);
+  text-align: center;
+  color: #fff;
+  border-right: 1px solid #fff;
+  padding-bottom: calc(10 / var(--screensize) * 100vw);
+}
+
+.about__item:last-child {
+  border-right: none;
+}
+
+.about__item span {
+  font-size: calc(60 / var(--screensize) * 100vw);
+  font-weight: 700;
+  margin-bottom: calc(16 / var(--screensize) * 100vw);
+  display: block;
+}
+
+.about__item p {
+  font-size: calc(24 / var(--screensize) * 100vw);
+  font-weight: 500;
+}
+
+.advantages {
+  background: #151515;
+  padding: calc(159 / var(--screensize) * 100vw) calc(100 / var(--screensize) * 100vw);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.advantages__item {
+  color: #fff;
+  text-align: center;
+}
+
+.advantages__item img {
+  margin-bottom: calc(16 / var(--screensize) * 100vw);
+  width: calc(100 / var(--screensize) * 100vw);
+}
+
+.advantages__item p {
+  font-size: calc(24 / var(--screensize) * 100vw);
+  font-weight: 500;
+}
+
+.outline-btn {
+  font-size: calc(20 / var(--screensize) * 100vw);
+  font-weight: 500;
+  padding: calc(16 / var(--screensize) * 100vw) calc(52 / var(--screensize) * 100vw);
+  border: 1px solid #000000;
+  color: #000000;
+  border-radius: 100px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.outline-btn:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
 @media (max-width: 1024px) {
   .container {
     padding: 0 calc(128 / var(--screensize) * 100vw);
@@ -1757,11 +1869,19 @@ button a {
     margin-top: calc(32 / var(--screensize) * 100vw);
     font-size: calc(24 / var(--screensize) * 100vw);
     line-height: 120%;
-    display: none;
+    display: block !important;
+    visibility: hidden;
+    height: 0;
+    background: #fff;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
 
   .who__desc__item.active {
-    display: block;
+    visibility: visible;
+    height: auto;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
 
   .who__desc__item ul {
@@ -1922,6 +2042,55 @@ button a {
   .header__contacts__phone {
     display: none;
   }
+
+  .about {
+    padding: calc(100 / var(--screensize) * 100vw) calc(43 / var(--screensize) * 100vw) calc(149 / var(--screensize) * 100vw);
+  }
+
+  .about__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: calc(100 / var(--screensize) * 100vw);
+  }
+
+  .about__item {
+    padding: 0 calc(25 / var(--screensize) * 100vw);
+    width: calc(387 / var(--screensize) * 100vw);
+    border-right: 0;
+  }
+
+  .about__item:first-child {
+    position: relative;
+  }
+
+  .about__item:first-child:after {
+    height: 100%;
+    content: "";
+    width: 1px;
+    background: #fff;
+    position: absolute;
+    right: calc(-53 / var(--screensize) * 100vw);
+    top: 0;
+  }
+
+  .about__item:last-child {
+    width: calc(506 / var(--screensize) * 100vw);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .advantages {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    row-gap: calc(77 / var(--screensize) * 100vw);
+    padding: calc(109 / var(--screensize) * 100vw) calc(42 / var(--screensize) * 100vw);
+  }
 }
 
 @media (max-width: 500px) {
@@ -1968,7 +2137,16 @@ button a {
 
   .hero h1 {
     font-size: calc(20 / var(--screensize) * 100vw);
+    margin-bottom: calc(12 / var(--screensize) * 100vw);
+  }
+
+  .hero p {
+    font-size: calc(20 / var(--screensize) * 100vw);
     margin-bottom: calc(27 / var(--screensize) * 100vw);
+  }
+
+  .hero .basic-btn {
+    font-size: calc(14 / var(--screensize) * 100vw);
   }
 
   .who {
@@ -2090,8 +2268,17 @@ button a {
     margin-bottom: calc(8 / var(--screensize) * 100vw);
   }
 
+  .models__item span {
+    font-size: calc(14 / var(--screensize) * 100vw);
+    margin: calc(8 / var(--screensize) * 100vw) 0;
+  }
+
+  .models__item .outline-btn {
+    font-size: calc(14 / var(--screensize) * 100vw);
+    padding: calc(8 / var(--screensize) * 100vw) calc(16 / var(--screensize) * 100vw);
+  }
+
   .contacts {
-    margin-top: calc(48 / var(--screensize) * 100vw);
     padding: calc(32 / var(--screensize) * 100vw) calc(16 / var(--screensize) * 100vw) calc(260 / var(--screensize) * 100vw);
   }
 
@@ -2169,6 +2356,67 @@ button a {
   .header__burger svg {
     width: calc(24 / var(--screensize) * 100vw);
     height: calc(24 / var(--screensize) * 100vw);
+  }
+
+  .about {
+    padding: calc(32 / var(--screensize) * 100vw) calc(16 / var(--screensize) * 100vw);
+  }
+
+  .about h2 {
+    font-size: calc(32 / var(--screensize) * 100vw);
+    margin-bottom: calc(32 / var(--screensize) * 100vw);
+  }
+
+  .about__items {
+    gap: calc(32 / var(--screensize) * 100vw);
+  }
+
+  .about__item {
+    padding: calc(23 / var(--screensize) * 100vw) calc(25 / var(--screensize) * 100vw);
+  }
+
+  .about__item span {
+    font-size: calc(42 / var(--screensize) * 100vw);
+  }
+
+  .about__item p {
+    font-size: calc(14 / var(--screensize) * 100vw);
+  }
+
+  .about__item:first-child,
+  .about__item:nth-child(2) {
+    position: relative;
+  }
+
+  .about__item:first-child:after,
+  .about__item:nth-child(2):after {
+    content: "";
+    position: absolute;
+    width: calc(158 / var(--screensize) * 100vw);
+    height: 1px;
+    bottom: calc(-16 / var(--screensize) * 100vw);
+    top: unset;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    display: block;
+    background: #fff;
+  }
+
+  .advantages {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: calc(133 / var(--screensize) * 100vw);
+    padding: calc(89 / var(--screensize) * 100vw) calc(16 / var(--screensize) * 100vw);
+  }
+
+  .advantages__item img {
+    width: calc(64 / var(--screensize) * 100vw);
+  }
+
+  .advantages__item p {
+    font-size: calc(16 / var(--screensize) * 100vw);
   }
 }
 
